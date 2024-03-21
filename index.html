@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cine Explorer</title>
+    <link rel="stylesheet" href="api.css" />
+    <link rel="icon" href="img/cine icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-v7zl0T9OVmHFvDgr7BsQgPPFgbIXXT7OSLgfGBgfcg0mh3RCyXPdMvLwXIfJm1lEfGRL8VknD+2MubefIRw/Ww=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Cine Explorer</h1>
+      <form id="searchForm" class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar películas..." />
+        <button type="submit">Buscar</button>
+      </form>
+    </header>
+    <div id="menu" class="menu">
+      <button onclick="filterByClassification('popular')">Popular</button>
+      <button onclick="filterByClassification('top_rated')">
+        Mejor Valoradas
+      </button>
+      <!-- <button onclick="filterByGenre('action')">Acción</button>
+      <button onclick="filterByGenre('comedy')">Comedia</button> -->
+      <button onclick="showFavorites()">Mis Favoritos</button>
+    </div>
+    <div id="movies" class="movie-grid"></div>
+    <script src="api.js"></script>
+  </body>
+</html>
